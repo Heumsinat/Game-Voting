@@ -14,5 +14,40 @@
 
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row align-center>
+      <ion-col>
+        <button color-1 ion-button block (click)="Button1()">Button1</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button color-1 ion-button block (click)="Button2()">Button2</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button color-1 ion-button block (click)="Button3()">Button3</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
+
+<ion-footer color>
+  <ion-toolbar>
+    
+      <button ion-button large clear (click)="popToRoot()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+   
+      <button ion-button large clear (click)="replay()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    
+      <button ion-button large clear (click)="exit()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    
+  </ion-toolbar>
+</ion-footer>
