@@ -16,7 +16,10 @@ import { TextPage } from '../text/text';
 })
 export class Menu3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform) {
+  constructor( public navCtrl: NavController, 
+               public navParams: NavParams, 
+               private alertCtrl: AlertController, 
+               private platform: Platform) {
   }
 
   ionViewDidLoad() {

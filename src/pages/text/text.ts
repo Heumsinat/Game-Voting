@@ -15,7 +15,10 @@ import { HomePage } from '../home/home';
 })
 export class TextPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform) {
+  constructor( public navCtrl: NavController, 
+               public navParams: NavParams, 
+               private alertCtrl: AlertController, 
+               private platform: Platform) {
   }
 
   ionViewDidLoad() {

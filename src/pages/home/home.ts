@@ -10,7 +10,9 @@ import {Menu3Page} from '../menu3/menu3';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private platform: Platform) {
+  constructor( public navCtrl: NavController, 
+               private alertCtrl: AlertController, 
+               private platform: Platform ) {
 
   }
   menu1(){
