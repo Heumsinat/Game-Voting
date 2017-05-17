@@ -32,7 +32,11 @@ export class TextPage {
   replay(){
     this.navCtrl.push(TextPage);
   }
-  
+
+  mute(){
+
+  }
+
   exit() {
     let alert = this.alertCtrl.create({
       title: 'ចាកចេញ',
