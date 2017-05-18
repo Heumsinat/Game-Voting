@@ -18,6 +18,7 @@
 // Apply RESET Overide
 @import "./scss/grid";
 @import "./scss/reset";
+@import "./scss/article";
 
 
 
@@ -41,12 +42,5 @@ ion-navbar {
   &[gutter] {
     margin-left: 20px;
     margin-right: 20px;
-  }
-}
-
-p {
-  &[readable-content] {
-    font-size: 2rem;
-    text-align: justify;
   }
 }

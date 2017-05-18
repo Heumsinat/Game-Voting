@@ -13,8 +13,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  private article_id: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.article_id = this.navParams.get('article_id');
   }
 
   ionViewDidLoad() {

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Voting App
+      Demo Application
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,32 +10,32 @@
   <ion-grid middle-lane>
       <ion-row>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary" [navPush]="DetailRoute">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(1)">
             Step 1
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(2)">
             Step 2
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(1)">
             Step 3
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
             Step 4
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
             Step 5
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(2)">
             Step 6
           </button>
         </ion-col>

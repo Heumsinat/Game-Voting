@@ -1,0 +1,30 @@
+/*
+* Article Style
+*/
+
+.article {
+
+  .article--header {
+    padding: 20px 0 20px;
+
+    .article--header__title {
+      line-height: 3.5rem;
+    }
+    .article--header__meta {
+      line-height: 2.2rem;
+    }
+
+  }
+
+  .article--content {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-align: justify;
+  }
+
+  // Helper
+  .divider {
+    border-top: 1px solid #999;
+  }
+
+}

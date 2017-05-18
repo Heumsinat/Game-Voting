@@ -13,4 +13,10 @@ export class HomePage {
 
   }
 
+  public viewDetail(id: number): any {
+    this.navCtrl.push(DetailPage, {
+      article_id: id
+    })
+  }
+
 }
