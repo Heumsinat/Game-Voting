@@ -1,3 +1,16 @@
 page-home {
+  // Reset CSS
+  ion-header {
+
+    &::after {
+      background-image: none !important;
+    }
+  }
+
+  ion-footer {
+    &::before {
+      background-image: none !important;
+    }
+  }
 
 }
