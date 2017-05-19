@@ -19,11 +19,16 @@ export class IvrplayerProvider {
     console.log('Hello IvrplayerProvider Provider', this.nativeAudio);
   }
 
+  public destroy():any {
+    this.nativeAudio.unload(this._playbackInstance);
+  }
+
   public play(filename: string): any {
     console.log("We're playing the following filename => ", filename);
     this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
       onError => console.log(onError)
     ).then( (onSuccess) => {
+      this.nativeAudio.play(this._playbackInstance);
       console.log('Playback Success');
     });
   }

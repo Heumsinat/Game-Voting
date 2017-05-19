@@ -26,4 +26,8 @@ export class DetailPage {
     this.ivrPlayer.play('hello.mp3');
   }
 
+  ionViewWillLeave() {
+    this.ivrPlayer.destroy();
+  }
+
 }
