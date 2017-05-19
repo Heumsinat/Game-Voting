@@ -9,6 +9,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 */
 @Injectable()
 export class IvrplayerProvider {
+  private _toggleMute:string = 'stop';
   private _filepath:string = 'assets/mp3/';
   private _playbackInstance:string = '_session';
   private _is_playback_finished:boolean = true;
@@ -29,11 +30,25 @@ export class IvrplayerProvider {
   }
 
   public stop(): Promise<any> {
+    this._toggleMute = 'play';
     return this.nativeAudio.stop(this._playbackInstance);
   }
 
-  public play(filename: string): Promise<any> {
+  public play(): Promise<any> {
+    this._toggleMute = 'stop';
     return this.nativeAudio.play(this._playbackInstance);
+  }
+
+  public togglePlay() {
+    switch(this._toggleMute) {
+      case 'stop':
+        this._toggleMute = 'play';
+        this.stop();
+        break;
+      default:
+        this._toggleMute = 'stop';
+        this.play();
+    }
   }
 
 }
