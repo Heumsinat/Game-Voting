@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 
+import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +29,8 @@ import { DetailPage } from '../pages/detail/detail';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    IvrplayerProvider
   ]
 })
 export class AppModule {}
