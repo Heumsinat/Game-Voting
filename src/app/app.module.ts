@@ -10,6 +10,7 @@ import { DetailPage } from '../pages/detail/detail';
 
 import { NativeAudio } from '@ionic-native/native-audio';
 import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
+import { ActionProvider } from '../providers/action/action';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IvrplayerProvider,
-    NativeAudio
+    NativeAudio,
+    ActionProvider
   ]
 })
 export class AppModule {}
