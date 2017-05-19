@@ -28,8 +28,9 @@ export class IvrplayerProvider {
     this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
       onError => console.log(onError)
     ).then( (onSuccess) => {
-      this.nativeAudio.play(this._playbackInstance);
-      console.log('Playback Success');
+      return this.nativeAudio.play(this._playbackInstance);
+    }).then( (onPlaybackSuccess) => {
+      console.log(onPlaybackSuccess);
     });
   }
 
