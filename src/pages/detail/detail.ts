@@ -15,6 +15,9 @@ import { IvrplayerProvider } from '../../providers/ivrplayer/ivrplayer';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+
+  private _filename:string = 'hello.mp3';
+  private _toggleMute:string = 'stop';
   private article_id: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider) {
@@ -24,17 +27,34 @@ export class DetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
-    this.ivrPlayer.play('hello.mp3');
+    this.ivrPlayer.register(this._filename).catch( onError => console.log(onError) ).then( (onSuccess)=> {
+      console.log('Registered a playback insance', onSuccess);
+      return this.ivrPlayer.play(this._filename);
+    }).then( (onPlaybackSuccess) => {
+      console.log('ivrPlayer is playing', onPlaybackSuccess);
+    });
   }
 
-  stopAudio(){
-    this.ivrPlayer.stop('hello.mp3');
-  }
+  // stopAudio(){
+  //   this.ivrPlayer.stop('hello.mp3');
+  // }
 
 
 
   ionViewWillLeave() {
     this.ivrPlayer.destroy();
+  }
+
+  public muteAudio() {
+    switch(this._toggleMute) {
+      case 'stop':
+        this._toggleMute = 'play';
+        this.ivrPlayer.stop();
+        break;
+      default:
+        this._toggleMute = 'stop';
+        this.ivrPlayer.play(this._filename);
+    }
   }
 
 }
