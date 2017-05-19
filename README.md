@@ -4,7 +4,7 @@
 ** build with Ionic 2 and Angular.io **
 
 ### Status
-[![Build Status](https://travis-ci.org/socheatsok78/Game-Voting.svg?branch=master)](https://travis-ci.org/socheatsok78/Game-Voting)
+[![Build Status](https://travis-ci.org/socheatsok78/Self-IVR-for-Mobile.svg?branch=master)](https://travis-ci.org/socheatsok78/Self-IVR-for-Mobile)
 
 ---
 
