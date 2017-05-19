@@ -1,4 +1,19 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+os: linux
+
 language: node_js
+node_js:
+  - "7"
+
+cache:
+  timeout: 600
+  directories:
+    - node_modules
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -22,3 +37,11 @@ android:
     # if you need to run emulator(s) during your tests
     # - sys-img-armeabi-v7a-android-22
     # - sys-img-armeabi-v7a-android-17
+
+install:
+  - npm install -g npm
+  - npm prune
+  - npm install
+
+after_success:
+  - ionic cordova build android
