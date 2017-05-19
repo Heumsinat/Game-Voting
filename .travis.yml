@@ -22,8 +22,9 @@ before_install:
 
 install:
   - echo "Install stage"
-  - curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
-  - sudo apt-get install -y python-software-properties nodejs
+  - nvm ls
+  # - curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
+  # - sudo apt-get install -y python-software-properties nodejs
   - npm install -g npm ionic cordova
   - npm prune
   - npm install
