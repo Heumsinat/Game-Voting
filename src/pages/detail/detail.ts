@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { IvrplayerProvider } from '../../providers/ivrplayer/ivrplayer';
+
 /**
  * Generated class for the DetailPage page.
  *
@@ -15,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetailPage {
   private article_id: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider) {
     this.article_id = this.navParams.get('article_id');
   }
 

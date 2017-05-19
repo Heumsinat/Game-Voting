@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 
+import { NativeAudio } from '@ionic-native/native-audio';
 import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    IvrplayerProvider
+    IvrplayerProvider,
+    NativeAudio
   ]
 })
 export class AppModule {}
