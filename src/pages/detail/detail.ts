@@ -23,6 +23,7 @@ export class DetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
+    this.ivrPlayer.play('hello.mp3');
   }
 
 }

@@ -9,11 +9,23 @@ import { NativeAudio } from '@ionic-native/native-audio';
 */
 @Injectable()
 export class IvrplayerProvider {
+  private _filepath:string = 'assets/mp3/';
+  private _playbackInstance:string = '_session';
+  private _is_playback_finished:boolean = true;
 
   constructor(
     public nativeAudio: NativeAudio
   ) {
     console.log('Hello IvrplayerProvider Provider', this.nativeAudio);
+  }
+
+  public play(filename: string): any {
+    console.log("We're playing the following filename => ", filename);
+    this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+      onError => console.log(onError)
+    ).then( (onSuccess) => {
+      console.log('Playback Success');
+    });
   }
 
 }
