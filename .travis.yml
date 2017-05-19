@@ -17,6 +17,9 @@ android:
     - build-tools-19.1.0
     - android-22
 
+jdk:
+  - oraclejdk8
+
 before_install:
   - echo "Before Install stage"
 
