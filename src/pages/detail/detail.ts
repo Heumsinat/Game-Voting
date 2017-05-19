@@ -29,7 +29,7 @@ export class DetailPage {
     console.log('ionViewDidLoad DetailPage');
     this.ivrPlayer.register(this._filename).catch( onError => console.log(onError) ).then( (onSuccess)=> {
       console.log('Registered a playback insance', onSuccess);
-      return this.ivrPlayer.play(this._filename);
+      return this.ivrPlayer.play();
     }).then( (onPlaybackSuccess) => {
       console.log('ivrPlayer is playing', onPlaybackSuccess);
     });
@@ -46,15 +46,7 @@ export class DetailPage {
   }
 
   public muteAudio() {
-    switch(this._toggleMute) {
-      case 'stop':
-        this._toggleMute = 'play';
-        this.ivrPlayer.stop();
-        break;
-      default:
-        this._toggleMute = 'stop';
-        this.ivrPlayer.play(this._filename);
-    }
+    this.ivrPlayer.togglePlay();
   }
 
 }

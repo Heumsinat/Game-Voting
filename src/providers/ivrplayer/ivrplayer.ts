@@ -9,6 +9,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 */
 @Injectable()
 export class IvrplayerProvider {
+  private _toggleMute:string = 'stop';
   private _filepath:string = 'assets/mp3/';
   private _playbackInstance:string = '_session';
   private _is_playback_finished:boolean = true;
@@ -19,31 +20,59 @@ export class IvrplayerProvider {
     console.log('Hello IvrplayerProvider Provider', this.nativeAudio);
   }
 
-  public destroy():any {
-    this.nativeAudio.unload(this._playbackInstance);
-  }
+  // public play(filename: string): any {
+  //   console.log("We're playing the following filename => ", filename);
+  //   this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+  //     onError => console.log(onError)
+  //   ).then( (onSuccess) => {
+  //     return this.nativeAudio.play(this._playbackInstance);
+  //   }).then( (onPlaybackSuccess) => {
+  //     console.log(onPlaybackSuccess);
+  //   });
+  // }
 
-  public play(filename: string): any {
+  // public stop(filename: string): any {
+  //   console.log("We're stop playing the following filename => ", filename);
+  //   this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+  //     onError => console.log(onError)
+  //   ).then( (onSuccess) => {
+  //     return this.nativeAudio.stop(this._playbackInstance);
+  //   }).then( (onPlaybackSuccess) => {
+  //     console.log(onPlaybackSuccess);
+  //   });
+  // }
+
+
+  public register(filename: string): Promise<any> {
     console.log("We're playing the following filename => ", filename);
-    this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
-      onError => console.log(onError)
-    ).then( (onSuccess) => {
-      return this.nativeAudio.play(this._playbackInstance);
-    }).then( (onPlaybackSuccess) => {
-      console.log(onPlaybackSuccess);
-    });
+    return this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename);
   }
 
-  public stop(filename: string): any {
-    console.log("We're stop playing the following filename => ", filename);
-    this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
-      onError => console.log(onError)
-    ).then( (onSuccess) => {
-      return this.nativeAudio.stop(this._playbackInstance);
-    }).then( (onPlaybackSuccess) => {
-      console.log(onPlaybackSuccess);
-    });
+  public destroy(): Promise<any> {
+    return this.nativeAudio.unload(this._playbackInstance);
   }
 
+  public stop(): Promise<any> {
+    this._toggleMute = 'play';
+    return this.nativeAudio.stop(this._playbackInstance);
+  }
+
+  public play(): Promise<any> {
+    this._toggleMute = 'stop';
+    return this.nativeAudio.play(this._playbackInstance);
+  }
+
+
+  public togglePlay() {
+    switch(this._toggleMute) {
+      case 'stop':
+        this._toggleMute = 'play';
+        this.stop();
+        break;
+      default:
+        this._toggleMute = 'stop';
+        this.play();
+    }
+  }
 
 }
