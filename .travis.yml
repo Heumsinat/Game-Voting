@@ -45,3 +45,4 @@ after_success:
 after_failure:
 # What if your test fails?
 - echo "After failure stage"
+- ionic info
