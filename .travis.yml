@@ -5,7 +5,9 @@ notifications:
 
 os: linux
 
-language: node_js
+language:
+  - android
+  - node_js
 node_js:
   - "7"
 
