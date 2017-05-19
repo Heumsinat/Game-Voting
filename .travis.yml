@@ -5,14 +5,14 @@ notifications:
 
 os: linux
 
-language: android
+language: node_js
 node_js:
   - "7"
 
-# cache:
-#   timeout: 600
-#   directories:
-#     - node_modules
+cache:
+  timeout: 600
+  directories:
+    - node_modules
 
 android:
   components:
@@ -46,5 +46,5 @@ install:
 script:
   - npm run build
 
-after_success:
-  - ionic cordova build android
+# after_success:
+  # - ionic cordova build android
