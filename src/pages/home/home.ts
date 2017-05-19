@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { AlertController, Platform, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
 
 @Component({
@@ -9,7 +9,7 @@ import { DetailPage } from '../detail/detail';
 export class HomePage {
   private DetailRoute = DetailPage;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private loadingCtrl: LoadingController, private alertCtrl: AlertController, private platform: Platform) {
 
   }
 
@@ -17,6 +17,26 @@ export class HomePage {
     this.navCtrl.push(DetailPage, {
       article_id: id
     })
+  }
+
+  private exitButtonClick() {
+    let alert = this.alertCtrl.create({
+      title: 'ចាកចេញ',
+      message: 'តើ​អ្នក​ពិត​ជា​ចង់​ចាក​ចេញ​ពី​កម្មវិធី​នេះ?​',
+      buttons: [
+        {
+          text: "ទេ",
+          role: 'cancel'
+        },
+        {
+          text: "បាទ​ / ចាស",
+          handler: () => {
+            this.platform.exitApp();
+          }
+        },
+      ]
+    });
+    alert.present();
   }
 
 }
