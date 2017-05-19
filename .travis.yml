@@ -43,5 +43,8 @@ install:
   - npm prune
   - npm install
 
+script:
+  - npm run build
+
 after_success:
   - ionic cordova build android
