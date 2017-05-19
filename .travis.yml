@@ -39,7 +39,7 @@ android:
     # - sys-img-armeabi-v7a-android-17
 
 install:
-  - npm install -g npm
+  - npm install -g npm ionic cordova
   - npm prune
   - npm install
 
