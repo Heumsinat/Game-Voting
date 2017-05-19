@@ -34,4 +34,16 @@ export class IvrplayerProvider {
     });
   }
 
+  public stop(filename: string): any {
+    console.log("We're playing the following filename => ", filename);
+    this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+      onError => console.log(onError)
+    ).then( (onSuccess) => {
+      return this.nativeAudio.stop(this._playbackInstance);
+    }).then( (onPlaybackSuccess) => {
+      console.log(onPlaybackSuccess);
+    });
+  }
+
+
 }

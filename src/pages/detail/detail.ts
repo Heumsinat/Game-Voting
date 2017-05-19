@@ -19,12 +19,19 @@ export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider) {
     this.article_id = this.navParams.get('article_id');
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
     this.ivrPlayer.play('hello.mp3');
   }
+
+  stopAudio(){
+    this.ivrPlayer.stop('hello.mp3');
+  }
+
+
 
   ionViewWillLeave() {
     this.ivrPlayer.destroy();
