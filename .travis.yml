@@ -25,7 +25,7 @@ before_install:
 
 install:
   - echo "Install stage"
-  - curl -sL https://deb.nodesource.com/setup_6.10 | sudo -E bash -
+  - curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
   - sudo apt-get install -y python-software-properties nodejs
   - npm install -g npm ionic cordova
   - npm prune
@@ -41,7 +41,7 @@ script:
 
 after_success:
   - echo "Build Success"
-  
+
 after_failure:
 # What if your test fails?
 - echo "After failure stage"
