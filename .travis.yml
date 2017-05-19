@@ -9,10 +9,10 @@ language: android
 node_js:
   - "7"
 
-cache:
-  timeout: 600
-  directories:
-    - node_modules
+# cache:
+#   timeout: 600
+#   directories:
+#     - node_modules
 
 android:
   components:
