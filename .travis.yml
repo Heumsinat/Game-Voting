@@ -14,9 +14,6 @@ cache:
 
 android:
   components:
-    - tools
-    - platform-tools
-
     - build-tools-19.1.0
     - android-22
 
