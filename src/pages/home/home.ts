@@ -7,10 +7,20 @@ import { DetailPage } from '../detail/detail';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  private page_id: number = 1;
   private DetailRoute = DetailPage;
 
-  constructor(public navCtrl: NavController, private loadingCtrl: LoadingController, private alertCtrl: AlertController, private platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController, private alertCtrl: AlertController, private platform: Platform) {
+    if(typeof this.navParams.get('page_id') != 'undefined') {
+      this.page_id = this.navParams.get('page_id');
+    }
+  }
 
+  public viewPage(id: number): any {
+    this.navCtrl.push(HomePage, {
+      page_id: id
+    })
   }
 
   public viewDetail(id: number): any {
