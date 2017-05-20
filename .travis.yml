@@ -26,10 +26,9 @@ jdk:
 
 before_install:
   - echo "Before Install stage"
-  - ls -l ${ANDROID_HOME}
-  - ls -l ${ANDROID_HOME}tools
-  - ls -l ${ANDROID_HOME}tools/bin
-  - echo y | ${ANDROID_HOME}tools/bin/sdkmanager --licenses
+  - ls -l ${ANDROID_HOME}licenses
+  - cat ${ANDROID_HOME}licenses/android-sdk-license
+  # - echo 8933bad161af4178b1185d1a37fbf41ea5269c55 >> ${ANDROID_HOME}licenses/android-sdk-license
 
 install:
   - echo "Install stage"
