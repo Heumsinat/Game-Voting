@@ -26,9 +26,9 @@ jdk:
 
 before_install:
   - echo "Before Install stage"
-  - ls -l ${ANDROID_HOME}licenses
+  - mkdir -p ${ANDROID_HOME}licenses/
+  - echo 8933bad161af4178b1185d1a37fbf41ea5269c55 >> ${ANDROID_HOME}licenses/android-sdk-license
   - cat ${ANDROID_HOME}licenses/android-sdk-license
-  # - echo 8933bad161af4178b1185d1a37fbf41ea5269c55 >> ${ANDROID_HOME}licenses/android-sdk-license
 
 install:
   - echo "Install stage"
