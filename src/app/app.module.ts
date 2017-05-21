@@ -10,7 +10,6 @@ import { DetailPage } from '../pages/detail/detail';
 
 import { NativeAudio } from '@ionic-native/native-audio';
 import { IvrplayerProvider } from '../providers/ivrplayer/ivrplayer';
-import { ActionProvider } from '../providers/action/action';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { ActionProvider } from '../providers/action/action';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IvrplayerProvider,
     NativeAudio,
-    ActionProvider
   ]
 })
 export class AppModule {}
