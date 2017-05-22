@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController, Platform, NavController, NavParams } from 'ionic-angular';
-import { IvrplayerProvider } from '../ivrplayer/ivrplayer';
+// import { IvrplayerProvider } from '../ivrplayer/ivrplayer';
 
 /*
   Generated class for the ActionProvider provider.
@@ -11,7 +11,7 @@ import { IvrplayerProvider } from '../ivrplayer/ivrplayer';
 @Injectable()
 export class ActionProvider {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform, private ivrPlayer: IvrplayerProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private platform: Platform) {
     console.log('Hello ActionProvider Provider');
   }
 
