@@ -7,7 +7,57 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-grid middle-lane>
+  <ion-grid middle-lane *ngIf="page_id == 1">
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewPage(2)">
+            Step 1
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewPage(1)">
+            Step 2
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewPage(3)">
+            Step 3
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewDetail(1)">
+            Step 4
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
+            Step 5
+          </button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <ion-grid middle-lane *ngIf="page_id == 2">
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
+            Step 1
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewDetail(2)">
+            Step 2
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button large outline block color="secondary" (click)="viewDetail(1)">
+            Step 3
+          </button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <ion-grid middle-lane *ngIf="page_id == 3">
       <ion-row>
         <ion-col col-12>
           <button ion-button large outline block color="secondary" (click)="viewDetail(1)">
@@ -25,13 +75,8 @@
           </button>
         </ion-col>
         <ion-col col-12>
-          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
+          <button ion-button large outline block color="secondary" (click)="viewDetail(2)">
             Step 4
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color="secondary" (click)="viewDetail(3)">
-            Step 5
           </button>
         </ion-col>
       </ion-row>
