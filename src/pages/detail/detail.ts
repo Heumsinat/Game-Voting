@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { IvrplayerProvider } from '../../providers/ivrplayer/ivrplayer';
+import { ActionProvider } from '../../providers/action/action';
 
 /**
  * Generated class for the DetailPage page.
@@ -20,7 +21,7 @@ export class DetailPage {
   private _toggleMute:string = 'stop';
   private article_id: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider, private actionProvider: ActionProvider) {
     this.article_id = this.navParams.get('article_id');
 
   }
@@ -41,6 +42,10 @@ export class DetailPage {
 
   public muteAudio() {
     this.ivrPlayer.togglePlay();
+  }
+
+  private exitButtonClick() {
+    this.actionProvider.exitApp();
   }
 
 }
