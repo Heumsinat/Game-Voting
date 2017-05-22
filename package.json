@@ -10,6 +10,7 @@
         "lint": "ionic-app-scripts lint",
         "ionic:build": "ionic-app-scripts build",
         "ionic:serve": "ionic-app-scripts serve",
+        "test": "npm run lint",
         "p:fix": "cd ~ && curl -s 'https://get.sdkman.io' | bash && source ~/.sdkman/bin/sdkman-init.sh && sdk install gradle 3.5",
         "p:sdk": "$ANDROID_HOME/tools/bin/sdkmanager 'system-images;android-24;google_apis_playstore;x86'",
         "p:avd": "$ANDROID_HOME/tools/bin/avdmanager create avd --name 'Cordova_Nexus_5X' -k 'system-images;android-24;google_apis_playstore;x86'",

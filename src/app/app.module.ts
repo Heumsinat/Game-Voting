@@ -34,7 +34,7 @@ import { ActionProvider } from '../providers/action/action';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IvrplayerProvider,
     NativeAudio,
-    ActionProvider
+    ActionProvider,
   ]
 })
 export class AppModule {}

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController, Platform } from 'ionic-angular';
 import { IvrplayerProvider } from '../../providers/ivrplayer/ivrplayer';
 
 /**
@@ -20,7 +19,13 @@ export class DetailPage {
   private _toggleMute:string = 'stop';
   private article_id: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ivrPlayer: IvrplayerProvider) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public ivrPlayer: IvrplayerProvider,
+    private alertCtrl: AlertController,
+    private platform: Platform
+  ) {
     this.article_id = this.navParams.get('article_id');
 
   }
@@ -39,8 +44,32 @@ export class DetailPage {
     this.ivrPlayer.destroy();
   }
 
-  public muteAudio() {
+  private routeHome() {
+    this.navCtrl.popToRoot();
+  }
+
+  private muteAudio() {
     this.ivrPlayer.togglePlay();
+  }
+
+  private exitButtonClick() {
+    let alert = this.alertCtrl.create({
+      title: 'ចាកចេញ',
+      message: 'តើ​អ្នក​ពិត​ជា​ចង់​ចាក​ចេញ​ពី​កម្មវិធី​នេះ?​',
+      buttons: [
+        {
+          text: "ទេ",
+          role: 'cancel'
+        },
+        {
+          text: "បាទ​ / ចាស",
+          handler: () => {
+            this.platform.exitApp();
+          }
+        },
+      ]
+    });
+    alert.present();
   }
 
 }
