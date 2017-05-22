@@ -5,9 +5,7 @@ notifications:
 
 os: linux
 
-language: node_js
-node_js:
-  - "7"
+language: android
 
 cache:
   timeout: 600
@@ -16,32 +14,45 @@ cache:
 
 android:
   components:
-    # Uncomment the lines below if you want to
-    # use the latest revision of Android SDK Tools
-    # - tools
-    # - platform-tools
-
-    # The BuildTools version used by your project
-    - build-tools-19.1.0
-
-    # The SDK version used to compile your project
-    - android-22
-
-    # Additional components
-    # - extra-google-google_play_services
+    - tools
+    - platform-tools
+    - build-tools-25.0.1
+    - android-24
     # - extra-google-m2repository
     # - extra-android-m2repository
-    # - addon-google_apis-google-19
 
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
-    # - sys-img-armeabi-v7a-android-22
-    # - sys-img-armeabi-v7a-android-17
+jdk:
+  - oraclejdk8
+
+before_install:
+  - echo "Before Install stage"
+  - mkdir -p ${ANDROID_HOME}licenses/
+  - echo 8933bad161af4178b1185d1a37fbf41ea5269c55 >> ${ANDROID_HOME}licenses/android-sdk-license
+  - cat ${ANDROID_HOME}licenses/android-sdk-license
 
 install:
-  - npm install -g npm
+  - echo "Install stage"
+  - nvm ls
+  - nvm install 6
+  - nvm use 6
+  # - curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
+  # - sudo apt-get install -y python-software-properties nodejs
+  - npm install -g npm ionic cordova
   - npm prune
   - npm install
 
-after_success:
+script:
+  - echo "Start Linting"
+  - npm test
+  - echo "Start Build Test"
+  - npm run build
+  - echo "Cordova Build Android Test"
   - ionic cordova build android
+
+after_success:
+  - echo "Build Success"
+
+after_failure:
+# What if your test fails?
+- echo "After failure stage"
+- ionic info

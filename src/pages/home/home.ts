@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AlertController, Platform, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { AlertController, NavController, Platform, NavParams, LoadingController } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
+
 
 @Component({
   selector: 'page-home',
@@ -27,6 +28,10 @@ export class HomePage {
     this.navCtrl.push(DetailPage, {
       article_id: id
     })
+  }
+
+  private routeHome() {
+    this.navCtrl.popToRoot();
   }
 
   private exitButtonClick() {
