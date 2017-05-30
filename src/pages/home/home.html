@@ -1,86 +1,268 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Demo Application
+      ការ​ដោះ​ស្រាយ​ពាក្យ​បណ្ដឹង គ.ជ.ប
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid middle-lane *ngIf="page_id == 1">
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(2)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(1)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(3)">
-            Step 3
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 4
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(3)">
-            Step 5
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+<ion-content>
 
-  <ion-grid middle-lane *ngIf="page_id == 2">
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(3)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 3
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+  <div block *ngIf="page_id == 1">
+    <!-- Title -->
+    <ion-card poll-card (click)="viewDetail(2.1)">
+      <ion-card-header poll-content>
+        <h1>
+          ការ​ដោះស្រាយ​ពាក្យ​បណ្តឹង​អំពី​ភាព​មិន​ប្រក្រតី​ទាក់​ទង​នឹង​ការ​បោះ​ឆ្នោត​ និង​ការ​រាប់​សន្លឹក​ឆ្នោត​ នៅ​គណៈ​កម្មការ​ការិយាល័យ​បោះឆ្នោត និងរាប់​សន្លឹក​ឆ្នោត (គ.ក.ប/គ.ក.រ) ​​គណៈកម្មការ​ឃុំ​សង្កាត់​រៀបចំ​ការ​បោះឆ្នោត (គឃ.សប) និង​គណៈកម្មការ​រាជធានី​ខេត្ត​រៀបចំ​ការ​បោះឆ្នោត (គ.ធ.ខប)
+        </h1>
+      </ion-card-header>
+    </ion-card>
 
-  <ion-grid middle-lane *ngIf="page_id == 3">
+    <!-- Card 1 -->
+    <ion-card poll-card (click)="viewDetail(1)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ១
+        </div>
+        <div class="poll-content-description">
+          ការ​ដាក់ និង​ការ​ដោះស្រាយ​បណ្តឹង ​នៅ​គណៈកម្មការ​ការិយាល័យ​បោះឆ្នោត​ និង​រាប់​សន្លឹក​ឆ្នោត (គ.ក.ប/គ.ក.រ)
+        </div>
+      </ion-card-header>
       <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 3
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 4
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
           </button>
         </ion-col>
       </ion-row>
-  </ion-grid>
+    </ion-card>
+
+    <!-- Card 2 -->
+    <ion-card poll-card (click)="viewPage(2)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ២
+        </div>
+        <div class="poll-content-description">
+          កា​រដាក់​ ​និង​ការ​ដោះស្រាយ​ពាក្យបណ្តឹង​ ​នៅ​ ​គណៈកម្មការ​ឃុំ​សង្កាត់​រៀបចំ​ការ​បោះឆ្នោត​ (​គឃ​.​សប​)
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 3 -->
+    <ion-card poll-card (click)="viewPage(3)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ៣
+        </div>
+        <div class="poll-content-description">
+          កា​រដាក់​ ​និង​ការ​ដោះស្រាយ​ពាក្យបណ្តឹង​នៅ​គណៈកម្មការ​រាជធានី​ខេត្ត​រៀបចំ​ការបោះឆ្នោត​ (​គធ​.​ខប​)
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div> <!-- page_id = 1  -->
+
+  <div block *ngIf="page_id == 2">
+    <!-- Title -->
+    <ion-card poll-card (click)="viewDetail(2.1)">
+      <ion-card-header poll-content>
+        <h1>
+          កា​រដាក់​ ​និង​ការ​ដោះស្រាយ​ពាក្យបណ្តឹង​ ​នៅ​ ​គណៈកម្មការ​ឃុំ​សង្កាត់​រៀបចំ​ការ​បោះឆ្នោត​ (​គឃ​.​សប​)
+        </h1>
+      </ion-card-header>
+    </ion-card>
+
+    <!-- Card 1 -->
+    <ion-card poll-card (click)="viewDetail(2.1)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ១
+        </div>
+        <div class="poll-content-description">
+          ​ពេល​កំណត់​ ​ទម្រង់​ដែល​ត្រូវ​ប្រើ​ ​និង​ព័ត៌មាន​ចាំបាច់​មួយ​ចំនួន
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 2 -->
+    <ion-card poll-card (click)="viewDetail(2.2)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ២
+        </div>
+        <div class="poll-content-description">
+          ពាក្យបណ្តឹង​ដែល​បាន​ដាក់​ក្រោយ​អំឡុង​ពេលកំណត់​ ​និង​មិន​មាន​បញ្ជាក់​ព័ត៌មាន​គ្រប់គ្រាន់
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 3 -->
+    <ion-card poll-card (click)="viewDetail(2.3)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ៣
+        </div>
+        <div class="poll-content-description">
+          ពាក្យបណ្តឹង​បាន​ដាក់​ក្នុង​អំឡុង​ពេលកំណត់​ ​និង​មាន​ព័ត៌មាន​ ​គ្រប់គ្រាន់
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 4 -->
+    <ion-card poll-card (click)="viewDetail(2.4)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ៤
+        </div>
+        <div class="poll-content-description">
+          ជំហាន​បន្ទាប់​សម្រាប់​អ្នក​ប្តឹង​ដែល​មិនសុខចិត្ត​នឹង​សេចក្តី​សម្រេច​របស់​ ​គឃ​.​សប​
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div> <!-- page_id = 2  -->
+
+
+  <div block *ngIf="page_id == 3">
+    <!-- Title -->
+    <ion-card poll-card (click)="viewDetail(2.1)">
+      <ion-card-header poll-content>
+        <h1>
+          កា​រដាក់​ ​និង​ការ​ដោះស្រាយ​ពាក្យបណ្តឹង​នៅ​គណៈកម្មការ​រាជធានី​ខេត្ត​រៀបចំ​ការបោះឆ្នោត​ (​គធ​.​ខប​)
+        </h1>
+      </ion-card-header>
+    </ion-card>
+
+    <!-- Card 1 -->
+    <ion-card poll-card (click)="viewDetail(3.1)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ១
+        </div>
+        <div class="poll-content-description">
+          ពេលកំណត់​ ​ទម្រង់​ដែល​ត្រូវ​ប្រើ​ ​និង​ព័ត៌មាន​ចាំបាច់​មួយ​ចំនួន​ ​ដែល​ត្រូវ​បំពេញ​ដោយ​អ្នក​​ប្តឹង​ ​ប្រជាពលរដ្ឋ​ដែល​រស់នៅ​ក្នុង​ឃុំ​-​សង្កាត់​ ​ឬ​គណបក្ស​នយោបាយ​ដែល​មាន​បញ្ជី​បេក្ខជន​ឈរឈ្មោះ​បោះឆ្នោត​ក្នុង​ឃុំ​សង្កាត់
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 2 -->
+    <ion-card poll-card (click)="viewDetail(3.2)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ២
+        </div>
+        <div class="poll-content-description">
+          ពាក្យបណ្តឹង​ដាក់​ក្រោយ​អំឡុង​ពេលកំណត់​ ​ឬ​មិន​មាន​បញ្ជាក់​ព័ត៌មាន​គ្រប់គ្រាន់​
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 3 -->
+    <ion-card poll-card (click)="viewDetail(3.3)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ៣
+        </div>
+        <div class="poll-content-description">
+          ពាក្យបណ្តឹង​បាន​ដាក់​ក្នុង​អំឡុង​ពេលកំណត់​ ​និង​មាន​ព័ត៌មាន​គ្រប់
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <!-- Card 4 -->
+    <ion-card poll-card (click)="viewDetail(3.4)">
+      <ion-card-header poll-content>
+        <div class="poll-content-number">
+          ៤
+        </div>
+        <div class="poll-content-description">
+          ការ​បដិសេធ​ ​ឬ​សម្រេច​ព្យួរ​លទ្ធផល​បណ្តោះអាសន្ន​នៃ​ការបោះឆ្នោត​ដោយ​ ​គធ.ខប
+        </div>
+      </ion-card-header>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="md-book"></ion-icon>
+            <div>អាន​អត្ថបទ​បន្ថែម​</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div> <!-- page_id = 2  -->
+
+
 </ion-content>
 
 <ion-footer>

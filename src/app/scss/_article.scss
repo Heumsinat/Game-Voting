@@ -5,10 +5,12 @@
 .article {
 
   .article--header {
-    padding: 20px 0 20px;
+    padding: 5px 0 5px;
+    text-align: left;
 
     .article--header__title {
       line-height: 3.5rem;
+      font-size: 2.5rem;
     }
     .article--header__meta {
       line-height: 2.2rem;
@@ -17,9 +19,24 @@
   }
 
   .article--content {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2.6rem;
-    text-align: justify;
+
+    ul {
+      padding-left: 20px;
+      li {
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        ul {
+          padding-top: 10px;
+          li {
+            text-align: left;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
   }
 
   // Helper

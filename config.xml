@@ -1,8 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>MyApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="kh.org.necelect.polling-counting-edr" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>
+      ការ​ដោះ​ស្រាយ​ពាក្យ​បណ្ដឹង គ.ជ.ប
+    </name>
+    <description>ការ​ដោះស្រាយ​ពាក្យ​បណ្តឹង​អំពី​ភាព​មិន​ប្រក្រតី​ទាក់​ទង​នឹង​ការ​បោះ​ឆ្នោត​ និង​ការ​រាប់​សន្លឹក​ឆ្នោត​ នៅ​គណៈ​កម្មការ​ការិយាល័យ​បោះឆ្នោត និងរាប់​សន្លឹក​ឆ្នោត (គ.ក.ប/គ.ក.រ) ​​គណៈកម្មការ​ឃុំ​សង្កាត់​រៀបចំ​ការ​បោះឆ្នោត (គឃ.សប) និង​គណៈកម្មការ​រាជធានី​ខេត្ត​រៀបចំ​ការ​បោះឆ្នោត (គ.ធ.ខប)</description>
+    <author email="necinfo@forum.org.kh" href="https://www.necelect.org.kh">NEC</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
@@ -78,11 +80,11 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
     </platform>
     <engine name="android" spec="^6.2.3" />
-    <plugin name="cordova-plugin-console" spec="^1.0.5" />
-    <plugin name="cordova-plugin-device" spec="^1.1.4" />
+    <plugin name="cordova-plugin-console" spec="^1.0.7" />
+    <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-nativeaudio" spec="^3.0.9" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
 </widget>
