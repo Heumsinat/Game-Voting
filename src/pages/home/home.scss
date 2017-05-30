@@ -19,32 +19,41 @@ page-home {
       margin: 0;
       width: 100%;
       height: 33.33%;
+      box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.5),
+        0 3px 1px -2px rgba(0, 0, 0, 0.6),
+        0 1px 5px 0 rgba(0, 0, 0, 0);
 
       ion-card-header {
         &[poll-content] {
           white-space: inherit;
           display: flex;
           align-items: center;
-          padding-top: 5px;
+          vertical-align: bottom;
+          padding-top: 16px;
           padding-bottom: 5px;
+          font-family: 'Hanuman';
 
           .poll-content-number {
             flex: 1 20%;
             text-align: left;
-            padding-left: 16px;
             font-size: 5rem;
+            padding: 10px 20px 4px 20px;
+            margin: 10px 20px 10px 5px;
+            // background: #555;
+            // color: #fff;
           }
           .poll-content-description {
             flex: 1 80%;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             line-height: 2.8rem;
+            text-align: justify;
           }
         }
       }
 
       ion-row {
         [ion-button] {
-
           font-size: 1.6rem;
         }
       }
