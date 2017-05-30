@@ -28,6 +28,14 @@
       li {
         padding-left: 10px;
         padding-bottom: 10px;
+
+        ul {
+          padding-top: 10px;
+          li {
+            text-align: left;
+            padding-bottom: 5px;
+          }
+        }
       }
     }
   }
