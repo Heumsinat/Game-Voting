@@ -15,9 +15,9 @@ import { IvrplayerProvider } from '../../providers/ivrplayer/ivrplayer';
 })
 export class DetailPage {
 
-  private _filename:string = 'hello.mp3';
-  private _toggleMute:string = 'stop';
   private article_id: number;
+  private _filename:string = this.article_id+'.mp3';
+  private _toggleMute:string = 'stop';
 
   constructor(
     public navCtrl: NavController,
