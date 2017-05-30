@@ -1,86 +1,74 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Demo Application
+      ការ​ដោះ​ស្រាយ​ពាក្យ​បណ្ដឹង គ.ជ.ប
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid middle-lane *ngIf="page_id == 1">
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(2)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(1)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewPage(3)">
-            Step 3
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 4
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(3)">
-            Step 5
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+<ion-content>
 
-  <ion-grid middle-lane *ngIf="page_id == 2">
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(3)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 3
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+  <!-- Card 1 -->
+  <ion-card poll-card>
+    <ion-card-header poll-content>
+      <div class="poll-content-number">
+        ១
+      </div>
+      <div class="poll-content-description">
+        ការដាក់ និងការដោះស្រាយបណ្តឹង នៅគណៈកម្មការការិយាល័យបោះឆ្នោត និងរាប់សន្លឹកឆ្នោត (គ.ក.ប/គ.ក.រ)
+      </div>
+    </ion-card-header>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button icon-left clear small>
+          <ion-icon name="md-book"></ion-icon>
+          <div>អាន​អត្ថបទ​បន្ថែម​</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
-  <ion-grid middle-lane *ngIf="page_id == 3">
-      <ion-row>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 1
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 2
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(1)">
-            Step 3
-          </button>
-        </ion-col>
-        <ion-col col-12>
-          <button ion-button large outline block color-1 (click)="viewDetail(2)">
-            Step 4
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+  <!-- Card 2 -->
+  <ion-card poll-card>
+    <ion-card-header poll-content>
+      <div class="poll-content-number">
+        ២
+      </div>
+      <div class="poll-content-description">
+        ការដាក់ និងការដោះស្រាយពាក្យបណ្តឹង នៅ គណៈកម្មការឃុំសង្កាត់រៀបចំការបោះឆ្នោត​ ​(​គឃ.សប)
+      </div>
+    </ion-card-header>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button icon-left clear small>
+          <ion-icon name="md-book"></ion-icon>
+          <div>អាន​អត្ថបទ​បន្ថែម​</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- Card 3 -->
+  <ion-card poll-card>
+    <ion-card-header poll-content>
+      <div class="poll-content-number">
+        ៣
+      </div>
+      <div class="poll-content-description">
+        ការដាក់ និងការដោះស្រាយពាក្យបណ្តឹងនៅគណៈកម្មការរាជធានីខេត្តរៀបចំការបោះឆ្នោត (គធ.ខប)
+      </div>
+    </ion-card-header>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button icon-left clear small>
+          <ion-icon name="md-book"></ion-icon>
+          <div>អាន​អត្ថបទ​បន្ថែម​</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
 </ion-content>
 
 <ion-footer>
