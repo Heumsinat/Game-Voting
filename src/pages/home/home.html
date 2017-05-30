@@ -10,7 +10,7 @@
 
   <div block *ngIf="page_id == 1">
     <!-- Card 1 -->
-    <ion-card poll-card>
+    <ion-card poll-card (click)="viewDetail(1)">
       <ion-card-header poll-content>
         <div class="poll-content-number">
           ១
