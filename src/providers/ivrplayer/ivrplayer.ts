@@ -20,6 +20,29 @@ export class IvrplayerProvider {
     console.log('Hello IvrplayerProvider Provider', this.nativeAudio);
   }
 
+  // public play(filename: string): any {
+  //   console.log("We're playing the following filename => ", filename);
+  //   this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+  //     onError => console.log(onError)
+  //   ).then( (onSuccess) => {
+  //     return this.nativeAudio.play(this._playbackInstance);
+  //   }).then( (onPlaybackSuccess) => {
+  //     console.log(onPlaybackSuccess);
+  //   });
+  // }
+
+  // public stop(filename: string): any {
+  //   console.log("We're stop playing the following filename => ", filename);
+  //   this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename).catch(
+  //     onError => console.log(onError)
+  //   ).then( (onSuccess) => {
+  //     return this.nativeAudio.stop(this._playbackInstance);
+  //   }).then( (onPlaybackSuccess) => {
+  //     console.log(onPlaybackSuccess);
+  //   });
+  // }
+
+
   public register(filename: string): Promise<any> {
     console.log("We're playing the following filename => ", filename);
     return this.nativeAudio.preloadSimple(this._playbackInstance, this._filepath+filename);
@@ -38,6 +61,7 @@ export class IvrplayerProvider {
     this._toggleMute = 'stop';
     return this.nativeAudio.play(this._playbackInstance);
   }
+
 
   public togglePlay() {
     switch(this._toggleMute) {

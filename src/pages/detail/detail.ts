@@ -40,6 +40,12 @@ export class DetailPage {
     });
   }
 
+  // stopAudio(){
+  //   this.ivrPlayer.stop('hello.mp3');
+  // }
+
+
+
   ionViewWillLeave() {
     this.ivrPlayer.destroy();
   }
